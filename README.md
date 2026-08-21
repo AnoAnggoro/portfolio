@@ -128,13 +128,30 @@ Kalau gambar yang ditulis di `data.js` belum ada berkasnya, situs tidak rusak â€
 
 ---
 
-## Menerbitkan ulang
+## Alur setelah mengubah kode
 
-Setelah mengubah isi, unggah ulang dari folder ini:
+GitHub dan Cloudflare terpisah. `git push` menyimpan riwayat, `wrangler` yang membuat
+perubahannya terlihat pengunjung. Lupa yang kedua berarti situs masih versi lama.
 
 ```bash
+# 1. cek dulu di lokal
+python -m http.server 5500
+
+# 2. lihat apa saja yang berubah
+git status
+
+# 3. simpan ke GitHub
+git add .
+git commit -m "jelaskan apa yang diubah"
+git push
+
+# 4. terbitkan ke situs
 npx wrangler pages deploy . --project-name portofolio
 ```
+
+Kalau ingin langkah 4 berjalan sendiri setiap kali `git push`, sambungkan repo ke
+Cloudflare lewat dashboard: **Workers & Pages -> portofolio -> Settings -> Builds ->
+Connect to Git**. Build command dikosongkan, output directory diisi `/`.
 
 Kalau alamat situsnya berganti, perbarui tiga tempat ini agar pratinjau tautan tetap benar:
 
