@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Portofolio</title>
+        <meta
+            name="description"
+            content="Portofolio proyek web dan aplikasi."
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20fill='%2314101c'/%3E%3Ctext%20x='32'%20y='46'%20font-family='monospace'%20font-size='38'%20font-weight='bold'%20fill='%23ff5a36'%20text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E" />
+        <meta name="theme-color" content="#14101c" />
+        <meta property="og:type" content="website" />
+<meta property="og:url" content="https://portofolio-7ap.pages.dev/" />
+        <meta property="og:title" content="Ano Dwi Anggoro — Web Developer" />
+        <meta property="og:description" content="Portofolio proyek web: sistem manajemen, aplikasi sekolah, dan toko online." />
+        <meta property="og:image" content="https://portofolio-7ap.pages.dev/assets/og.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header class="hero wrap">
+            <div class="hero__grid">
+                <div>
+                    <p class="hero__role" id="peran"></p>
+                    <h1 class="overprint">
+                        <span class="overprint__stack" id="nama"></span>
+                    </h1>
+                    <p class="lead hero__text" id="ringkas"></p>
+                    <div class="hero__cta">
+                        <a class="btn btn--fill" href="#proyek">Lihat proyek</a>
+                        <a class="btn" href="#kontak">Hubungi saya</a>
+                        <a class="btn" id="cv" hidden download>Unduh CV</a>
+                    </div>
+                </div>
+                <div class="portrait">
+                    <div class="portrait__frame">
+                        <img id="foto" alt="Foto diri" />
+                    </div>
+                    <div class="portrait__tag" id="lokasi"></div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="section wrap reveal" id="tentang">
+                <div class="section__head">
+                    <p class="eyebrow">Tentang saya</p>
+                    <h2>Orang di balik proyek-proyek ini</h2>
+                </div>
+                <div class="about">
+                    <div id="tentang-teks"></div>
+                    <dl class="facts" id="fakta"></dl>
+                </div>
+            </section>
+
+            <section class="section wrap reveal" id="keahlian">
+                <div class="section__head">
+                    <p class="eyebrow">Keahlian</p>
+                    <h2>Yang saya pakai sehari-hari</h2>
+                </div>
+                <div class="skills" id="skills"></div>
+            </section>
+
+            <section class="section wrap reveal" id="pengalaman">
+                <div class="section__head">
+                    <p class="eyebrow">Pengalaman</p>
+                    <h2>Jalan sampai ke sini</h2>
+                </div>
+                <div class="timeline" id="timeline"></div>
+            </section>
+
+            <section class="section wrap reveal" id="proyek">
+                <div class="section__head">
+                    <p class="eyebrow">Proyek</p>
+                    <h2>Yang sudah saya bangun</h2>
+                    <p
+                        class="lead muted"
+                        style="margin-top: 1rem; max-width: 52ch"
+                    >
+                        Klik salah satu untuk melihat tampilan dan cerita di
+                        baliknya.
+                    </p>
+                </div>
+                <div class="saring" id="saring"></div>
+                <div class="grid-projects" id="proyek-grid"></div>
+            </section>
+
+            <section class="section wrap reveal" id="kontak">
+                <div class="section__head">
+                    <p class="eyebrow">Kontak</p>
+                    <h2>Punya proyek? Cerita saja</h2>
+                </div>
+                <div class="kontak__list" id="kontak-list"></div>
+            </section>
+        </main>
+
+        <script src="data.js"></script>
+        <script src="app.js"></script>
+        <script>
+            pasangKerangka();
+
+            document.title = `${profile.nama} — ${profile.peran}`;
+            peran.textContent = profile.peran;
+            ringkas.textContent = profile.ringkas;
+            lokasi.textContent = profile.lokasi;
+            // src kosong membuat browser memuat halamannya sendiri sebagai gambar
+            if (profile.foto) {
+                foto.src = profile.foto;
+                foto.alt = `Foto ${profile.nama}`;
+            } else {
+                foto.outerHTML = htmlKosong("");
+            }
+
+            // tiga lapisan tinta yang meleset lalu pas — tanda cetak riso
+            nama.innerHTML = ["o", "b", "top"]
+                .map(
+                    (l) =>
+                        `<span class="overprint__layer overprint__layer--${l}">${profile.nama}</span>`,
+                )
+                .join("");
+
+            document.getElementById("tentang-teks").innerHTML = profile.tentang
+                .map((p) => `<p>${p}</p>`)
+                .join("");
+
+            document.getElementById("fakta").innerHTML = profile.fakta
+                .map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`)
+                .join("");
+
+            document.getElementById("skills").innerHTML = profile.skills
+                .map(
+                    (g) => `<div class="skills__grup">
+                <h3>${g.grup}</h3>
+                ${g.catatan ? `<p class="skills__catatan">${g.catatan}</p>` : ""}
+                <ul class="tags">${g.items.map((i) => `<li>${i}</li>`).join("")}</ul>
+              </div>`,
+                )
+                .join("");
+
+            document.getElementById("timeline").innerHTML = profile.pengalaman
+                .map(
+                    (e) => `<div class="timeline__item">
+                <div class="timeline__year">${e.tahun}</div>
+                <div>
+                  <h3>${e.posisi}</h3>
+                  <p class="timeline__where">${e.tempat}</p>
+                  <p>${e.detail}</p>
+                </div>
+              </div>`,
+                )
+                .join("");
+
+            document.getElementById("proyek-grid").innerHTML = projects
+                .map(
+                    (p) => `<a class="card" href="project.html?id=${encodeURIComponent(p.id)}">
+                <div class="card__thumb">${sampul(p) ? `<img src="${sampul(p)}" alt="Tampilan ${p.nama}" loading="lazy" decoding="async">` : htmlKosong("")}</div>
+                <div class="card__body">
+                  <div class="card__meta"><span>${p.tahun}</span><span>${p.stack.slice(0, 2).join(" · ")}</span></div>
+                  <h3>${p.nama}</h3>
+                  <p>${p.ringkas}</p>
+                  <div class="card__more">Lihat proyek →</div>
+                </div>
+              </a>`,
+                )
+                .join("");
+
+            const k = profile.kontak;
+            document.getElementById("kontak-list").innerHTML = [
+                ["Email", k.email, `mailto:${k.email}`],
+                ["GitHub", (k.github || "").replace(/^https?:\/\//, ""), k.github],
+                [
+                    "LinkedIn",
+                    (k.linkedin || "").replace(/^https?:\/\//, ""),
+                    k.linkedin,
+                ],
+                [
+                    "Instagram",
+                    (k.instagram || "").replace(/^https?:\/\//, ""),
+                    k.instagram,
+                ],
+            ]
+                .filter(([, isi]) => isi)
+                .map(
+                    ([label, isi, href]) =>
+                        `<a href="${href}"><b>${label}</b><span>${isi}</span></a>`,
+                )
+                .join("");
+
+            if (profile.cv) {
+                cv.href = profile.cv;
+                cv.hidden = false;
+            }
+
+            pasangFilter(
+                document.getElementById("saring"),
+                document.getElementById("proyek-grid"),
+            );
+            pasangZoom();
+            aktifkanReveal();
+        </script>
+    </body>
+</html>

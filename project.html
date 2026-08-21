@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proyek</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20fill='%2314101c'/%3E%3Ctext%20x='32'%20y='46'%20font-family='monospace'%20font-size='38'%20font-weight='bold'%20fill='%23ff5a36'%20text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E" />
+<meta name="theme-color" content="#14101c" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://portofolio-7ap.pages.dev/project.html" />
+<meta property="og:title" content="Proyek — Ano Dwi Anggoro" />
+<meta property="og:description" content="Rincian proyek, tampilan antarmuka, dan cerita di baliknya." />
+<meta property="og:image" content="https://portofolio-7ap.pages.dev/assets/og.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main id="isi" class="wrap"></main>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+<script>
+  pasangKerangka();
+
+  const id = new URLSearchParams(location.search).get("id");
+  const i = projects.findIndex((p) => p.id === id);
+  const isi = document.getElementById("isi");
+
+  if (i === -1) {
+    isi.innerHTML = `<section class="pjudul">
+        <p class="eyebrow">404</p>
+        <h1>Proyek tidak ditemukan</h1>
+        <p class="lead">Tautannya mungkin salah ketik. Kembali ke daftar proyek untuk melihat semuanya.</p>
+        <p style="margin-top:2rem"><a class="btn btn--fill" href="index.html#proyek">Ke daftar proyek</a></p>
+      </section>`;
+  } else {
+    const p = projects[i];
+    const lain = projects[(i + 1) % projects.length];
+    document.title = `${p.nama} — ${profile.nama}`;
+
+    // judul di header bingkai: alamat situs untuk web, nama aplikasi untuk desktop
+    const alamat =
+      p.tipe === "polos" ? p.nama : p.demo || p.nama.toLowerCase().replace(/\s+/g, "") + ".id";
+
+    const tautan = [
+      p.demo ? `<a class="btn btn--fill" href="${p.demo}" target="_blank" rel="noopener">Buka demo</a>` : "",
+      p.repo ? `<a class="btn" href="${p.repo}" target="_blank" rel="noopener">Lihat kode</a>` : "",
+    ].join("");
+
+    isi.innerHTML = `
+      <a class="back" href="index.html#proyek">← Semua proyek</a>
+
+      <section class="pjudul">
+        <p class="eyebrow">${p.tahun}</p>
+        <h1>${p.nama}</h1>
+        <p class="lead">${p.ringkas}</p>
+        <dl class="pmeta">
+          <div><dt>Peran</dt><dd>${p.peran}</dd></div>
+          <div><dt>Tahun</dt><dd>${p.tahun}</dd></div>
+          <div><dt>Jenis</dt><dd>${JENIS[p.tipe] || "Aplikasi web"}</dd></div>
+          <div><dt>Teknologi</dt><dd>${p.stack.join(", ")}</dd></div>
+        </dl>
+      </section>
+
+      <section class="section" style="border-top:0;padding-top:0">
+        ${galeri(daftarSampul(p), alamat)}
+      </section>
+
+      <section class="section reveal">
+        <div class="pbody">
+          <div>
+            <h2>Tentang proyek ini</h2>
+            ${p.deskripsi.map((t) => `<p>${t}</p>`).join("")}
+          </div>
+          <div>
+            <h2>Fitur utama</h2>
+            <ul class="fitur">${p.fitur.map((f) => `<li>${f}</li>`).join("")}</ul>
+            ${tautan ? `<div class="hero__cta" style="margin-top:2rem">${tautan}</div>` : ""}
+          </div>
+        </div>
+      </section>
+
+      ${
+        p.shots && p.shots.length
+          ? `<section class="section reveal">
+               <div class="section__head"><p class="eyebrow">Tampilan</p><h2>Sekilas isinya</h2></div>
+               ${galeri(p.shots, alamat)}
+             </section>`
+          : ""
+      }
+
+      ${
+        p.tantangan && p.tantangan.length
+          ? `<section class="section reveal">
+               <div class="section__head"><p class="eyebrow">Di balik layar</p><h2>Hambatan dan cara mengatasinya</h2></div>
+               <div class="tantangan">
+                 ${p.tantangan.map((t) => `<article><h3>${t.judul}</h3><p>${t.isi}</p></article>`).join("")}
+               </div>
+             </section>`
+          : ""
+      }
+
+      <a class="next" href="project.html?id=${encodeURIComponent(lain.id)}">
+        <span>Proyek berikutnya</span>
+        <strong>${lain.nama} →</strong>
+      </a>`;
+
+    pasangGaleri();
+    pasangZoom();
+    aktifkanReveal();
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+# cache wrangler: berisi ID akun Cloudflare, tidak untuk dibagikan
+.wrangler/
+.vercel/
+
+# sampah sistem
+Thumbs.db
+Desktop.ini
+.DS_Store

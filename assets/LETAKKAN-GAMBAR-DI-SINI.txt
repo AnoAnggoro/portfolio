@@ -1,0 +1,17 @@
+Taruh gambar di folder ini, lalu tulis nama filenya di data.js.
+
+Ukuran yang pas per bingkai (kind):
+  "web"    -> screenshot browser, lebar 1440px
+  "laptop" -> screenshot layar penuh, 1440 x 900px (16:10)
+  "tablet" -> screenshot tablet, 1024 x 768px (4:3)
+  "mobile" -> screenshot HP, 390 x 844px
+
+Gambar ditampilkan utuh, tidak dipotong. Pakai ukuran di atas supaya proporsinya
+pas dengan bingkainya.
+
+Menambah halaman gambar di bagian "Sekilas isinya": cukup tambah isian baru di
+dalam shots pada data.js. Tombol Sebelumnya/Berikutnya, titik penanda, dan
+penghitung halaman muncul sendiri. Panah kiri/kanan di keyboard juga jalan.
+
+Selama gambar belum ada, website menampilkan kotak bergaris yang menyebut nama
+file yang dicari — jadi tampilan tidak rusak.
