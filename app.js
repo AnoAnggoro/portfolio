@@ -157,7 +157,7 @@ function pasangZoom() {
 
   document.addEventListener("click", (e) => {
     const t = e.target;
-    if (t.tagName !== "IMG" || !t.closest(".mockup")) return;
+    if (t.tagName !== "IMG" || !t.closest(".mockup, .portrait__frame")) return;
     besar.src = t.currentSrc || t.src;
     besar.alt = t.alt;
     d.showModal();
@@ -204,6 +204,27 @@ function aktifkanReveal() {
   document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
 }
 
+/* Tautan menu menyala mengikuti bagian yang sedang dilihat. */
+function sorotNav() {
+  const tautan = new Map(
+    [...document.querySelectorAll('.nav__links a[href*="#"]')].map((a) => [a.hash.slice(1), a])
+  );
+  const bagian = [...tautan.keys()].map((id) => document.getElementById(id)).filter(Boolean);
+  if (!bagian.length) return;
+
+  const terlihat = new Set();
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((en) => (en.isIntersecting ? terlihat.add(en.target.id) : terlihat.delete(en.target.id)));
+      // yang paling atas di layar yang menang, bukan yang terakhir masuk
+      const aktif = bagian.find((el) => terlihat.has(el.id));
+      tautan.forEach((a, id) => a.setAttribute("aria-current", aktif ? id === aktif.id : false));
+    },
+    { rootMargin: "-20% 0px -70% 0px" }
+  );
+  bagian.forEach((el) => io.observe(el));
+}
+
 /* Header dan footer sama di semua halaman. */
 function pasangKerangka() {
   const inisial = profile.nama
@@ -234,4 +255,6 @@ function pasangKerangka() {
        <span>${profile.lokasi}</span>
      </footer>`
   );
+
+  sorotNav(); // di halaman proyek tidak ada bagiannya, fungsinya berhenti sendiri
 }
