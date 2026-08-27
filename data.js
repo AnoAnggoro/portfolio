@@ -78,12 +78,6 @@ const profile = {
             tempat: "Proyek klien dan mandiri",
             detail: "Tiga belas aplikasi, dikerjakan sendirian dari nol: merancang basis datanya, membangun antarmukanya, menulis perhitungannya, sampai laporan yang siap dicetak. Lima memakai metode pendukung keputusan, tiga memakai data mining, satu memakai deteksi objek YOLOv8, satu lagi sistem pemesanan online multi-cabang. Semua yang ada di halaman ini lahir dari sini.",
         },
-        {
-            tahun: "Mei — Okt 2021",
-            posisi: "Purchasing Staff",
-            tempat: "Shuckershaker",
-            detail: "Mengatur pembelian bahan baku, menjaga stok tidak habis di tengah jam sibuk, dan menawar harga ke pemasok. Beberapa tahun kemudian saya membangun modul stok dan transaksi untuk usaha orang lain — kali ini sudah tahu rasanya jadi pihak yang setiap hari memakainya.",
-        },
     ],
 
     kontak: {
@@ -1196,7 +1190,7 @@ const projects = [
             },
         ],
         demo: "https://bw-hairstyle.vercel.app/",
-        repo: "https://github.com/AnoAnggoro/BW_Hairstyle.git",
+        repo: "https://github.com/AnoAnggoro/Barbershop.git",
 
         deskripsi: [
             "Situs booking untuk Black White Hairstyle, barbershop dengan empat cabang di Jakarta Selatan dan Depok. Pemesanan jalan lima langkah — cabang, capster, treatment, tanggal dan jam, lalu data pemesan — dan jam yang ditawarkan dibaca langsung dari jadwal capster yang dipilih, per 30 menit dari jam 10.00 sampai 22.00, lengkap dengan alasan kalau satu slot tidak bisa diambil.",
