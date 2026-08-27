@@ -11,16 +11,16 @@ const profile = {
         "Saya membangun aplikasi yang mengambil alih pekerjaan manual — pencatatan, perhitungan, dan penjadwalan — tanpa membuat siapa pun harus percaya begitu saja pada hasilnya.",
 
     tentang: [
-        "Saya Ano Dwi Anggoro, web developer. Selama ini saya membangun aplikasi web dan desktop untuk yayasan, sekolah, posyandu, dan usaha kecil — tempat yang datanya masih berpindah antara buku tulis, grup WhatsApp, dan spreadsheet, dan butuh sistem yang benar-benar dipakai staf setiap hari, bukan yang hanya rapi saat didemokan.",
-        "Sampai hari ini tiga belas sistem saya bangun dari nol: pendataan anggota, pengelolaan keuangan, penilaian, pemesanan online, sampai perhitungan yang menopang sebuah keputusan. Seluruh tahapnya saya kerjakan sendiri — merancang basis data, menyusun antarmuka, menulis logika, menyiapkan laporan siap cetak, lalu mendampingi sampai sistemnya betul-betul jalan di tempat klien. Teknologinya menyesuaikan kebutuhan: PHP dan MySQL untuk sistem internal yang dipasang di komputer kantor, Next.js untuk yang harus cepat dibuka pelanggan dari HP.",
-        "Dua hal yang tidak saya tawar. Aplikasi harus bisa dipahami sejak pertama kali dibuka, tanpa pelatihan panjang. Dan setiap angka yang tampil harus bisa ditelusuri asal perhitungannya, supaya tetap bisa dipertanggungjawabkan saat ada yang bertanya.",
-        "Saat ini saya terbuka untuk proyek baru, baik pengembangan dari awal maupun melanjutkan dan merapikan sistem yang sudah berjalan. Ceritakan kebutuhan Anda lewat email atau LinkedIn di bawah, nanti saya susun perkiraan lingkup dan waktu pengerjaannya.",
+        "Saya Ano Dwi Anggoro, web developer. Saya membangun aplikasi web dan desktop untuk yayasan, sekolah, posyandu, dan usaha kecil — tempat yang datanya masih tersebar di buku tulis, grup WhatsApp, dan spreadsheet. Yang mereka butuhkan bukan aplikasi yang rapi saat didemokan, tapi yang benar-benar dipakai staf setiap hari.",
+        "Tiga belas sistem sudah saya bangun dari nol: pendataan anggota, pengelolaan keuangan, penilaian, pemesanan online, sampai perhitungan yang menopang sebuah keputusan. Semuanya saya kerjakan sendiri — basis data, antarmuka, logika, laporan siap cetak, sampai mendampingi pemakaiannya di tempat klien. Teknologi menyesuaikan kebutuhan: PHP dan MySQL untuk sistem internal kantor, Next.js untuk yang harus cepat dibuka pelanggan dari HP.",
+        "Dua hal yang tidak saya tawar: aplikasi harus bisa dipahami sejak pertama kali dibuka, tanpa pelatihan panjang, dan setiap angka yang tampil harus bisa ditelusuri asal perhitungannya saat ada yang bertanya.",
+        "Saat ini saya terbuka untuk proyek baru — membangun dari awal maupun melanjutkan sistem yang sudah berjalan. Ceritakan kebutuhan Anda lewat email atau LinkedIn di bawah, nanti saya susun perkiraan lingkup dan waktu pengerjaannya.",
     ],
 
     fakta: [
         ["Aplikasi dibangun", "13"],
         ["Klien", "Yayasan, sekolah, posyandu, UMKM"],
-        ["Lingkup", "Rancang basis data sampai serah terima"],
+        ["Lingkup", "Basis data sampai serah terima"],
         ["Status", "Terbuka untuk proyek baru"],
     ],
 
