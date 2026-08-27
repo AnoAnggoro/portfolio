@@ -26,22 +26,26 @@ const profile = {
     skills: [
         {
             grup: "Antarmuka yang tidak perlu dijelaskan",
-            catatan: "Tata letak yang jelas, tabel yang terbaca sekali lihat, dan halaman yang tetap enak dibuka dari HP.",
+            catatan:
+                "Tata letak yang jelas, tabel yang terbaca sekali lihat, dan halaman yang tetap enak dibuka dari HP.",
             items: ["HTML", "CSS", "JavaScript", "Tailwind", "Chart.js"],
         },
         {
             grup: "Data dan logika di belakangnya",
-            catatan: "Merancang tabel, menulis query, dan menjaga satu angka tidak berbeda antara dashboard dan laporan.",
+            catatan:
+                "Merancang tabel, menulis query, dan menjaga satu angka tidak berbeda antara dashboard dan laporan.",
             items: ["PHP", "MySQL", "JSON"],
         },
         {
             grup: "Analisis data jadi keputusan",
-            catatan: "Sistem yang memeringkat, mengelompokkan, atau memprediksi dari data yang sudah ada — dengan langkah perhitungan yang bisa ditelusuri, bukan sekadar angka akhir.",
+            catatan:
+                "Sistem yang memeringkat, mengelompokkan, atau memprediksi dari data yang sudah ada — dengan langkah perhitungan yang bisa ditelusuri, bukan sekadar angka akhir.",
             items: ["Python", "YOLOv8", "OpenCV"],
         },
         {
             grup: "Aplikasi desktop",
-            catatan: "Untuk pekerjaan yang harus jalan di komputer kantor apa adanya, tanpa bergantung internet.",
+            catatan:
+                "Untuk pekerjaan yang harus jalan di komputer kantor apa adanya, tanpa bergantung internet.",
             items: ["Java", "Swing"],
         },
         {
@@ -275,7 +279,11 @@ const projects = [
                 kind: "tablet",
                 caption: "Di tablet",
             },
-            { src: "assets/ypok-mobile.webp", kind: "mobile", caption: "Di HP" },
+            {
+                src: "assets/ypok-mobile.webp",
+                kind: "mobile",
+                caption: "Di HP",
+            },
         ],
     },
 
@@ -575,7 +583,11 @@ const projects = [
                 kind: "tablet",
                 caption: "Di tablet",
             },
-            { src: "assets/mask-mobile.webp", kind: "mobile", caption: "Di HP" },
+            {
+                src: "assets/mask-mobile.webp",
+                kind: "mobile",
+                caption: "Di HP",
+            },
         ],
     },
 
@@ -1128,6 +1140,97 @@ const projects = [
             },
             {
                 src: "assets/smk-jakarta-mobile.webp",
+                kind: "mobile",
+                caption: "Di HP",
+            },
+        ],
+    },
+
+    {
+        id: "bw-hairstyle",
+        nama: "BW Hairstyle",
+        tahun: "2026",
+        tipe: "web",
+        ringkas:
+            "Situs booking barbershop empat cabang — pilih capster, treatment, dan jam yang masih kosong.",
+        peran: "Desain & Pengembangan",
+        stack: ["Next.js", "React", "Tailwind", "MongoDB", "Cloudinary"],
+        cover: "assets/logo-bw.png",
+        galeri: [
+            {
+                src: "assets/bw-1.png",
+                caption:
+                    "Beranda — jam buka, jumlah cabang, dan jalan pintas ke booking",
+            },
+            {
+                src: "assets/bw-2.png",
+                caption:
+                    "About us — cerita salon dan cara kerja yang dipegang capster",
+            },
+            {
+                src: "assets/bw-3.png",
+                caption:
+                    "Lokasi — empat cabang dengan alamat, jumlah capster, dan jam buka",
+            },
+            {
+                src: "assets/bw-4.png",
+                caption:
+                    "Capster — pencarian nama atau spesialisasi, difilter per cabang",
+            },
+            {
+                src: "assets/bw-5.png",
+                caption:
+                    "Service — daftar harga pria, wanita, dan perawatan lain",
+            },
+            {
+                src: "assets/bw-6.png",
+                caption: "Galeri — hasil potong capster, difilter per gaya",
+            },
+            {
+                src: "assets/bw-7.png",
+                caption:
+                    "Masuk — akun untuk riwayat booking, opsional bagi pelanggan",
+            },
+            {
+                src: "assets/bw-8.png",
+                caption:
+                    "Booking — lima langkah dari pilih cabang sampai isi data",
+            },
+        ],
+        demo: "https://bw-hairstyle.vercel.app/",
+        repo: "https://github.com/AnoAnggoro/BW_Hairstyle.git",
+
+        deskripsi: [
+            "Situs booking untuk Black White Hairstyle, barbershop dengan empat cabang di Jakarta Selatan dan Depok. Pemesanan jalan lima langkah — cabang, capster, treatment, tanggal dan jam, lalu data pemesan — dan jam yang ditawarkan dibaca langsung dari jadwal capster yang dipilih, per 30 menit dari jam 10.00 sampai 22.00, lengkap dengan alasan kalau satu slot tidak bisa diambil.",
+            "Tiap capster punya spesialisasi dan daftar treatment yang benar-benar dikuasainya, jadi pilihan menyempit mengikuti siapa yang dipilih, bukan menampilkan semua service ke semua orang. Tidak ada bayar di muka: setelah booking, pelanggan pegang kode yang bisa dicek tanpa akun, dan yang mau riwayatnya tersimpan tinggal mendaftar dengan nomor HP yang sama.",
+        ],
+
+        fitur: [
+            "Booking lima langkah: cabang, capster, treatment, tanggal dan jam, data pemesan",
+            "Slot jam per 30 menit mengikuti jadwal capster, dengan keterangan kenapa satu jam tidak tersedia",
+            "Profil capster berisi spesialisasi, treatment yang dikuasai, dan harga mulai — bisa dicari dan difilter per cabang",
+            "Daftar service dengan harga dan durasi, terbagi pria, wanita, dan perawatan lain",
+            "Cek booking pakai kode tanpa akun, atau masuk untuk melihat seluruh riwayat",
+            "Galeri hasil potong yang bisa difilter per gaya",
+            "Halaman cabang dengan alamat, peta, capster, dan service yang tersedia",
+            "Jalur cadangan lewat WhatsApp untuk yang malas mengisi form",
+        ],
+
+        tantangan: [],
+
+        shots: [
+            {
+                src: "assets/bw.png",
+                kind: "laptop",
+                caption: "Di layar laptop",
+            },
+            {
+                src: "assets/bw-tablet.png",
+                kind: "tablet",
+                caption: "Di tablet",
+            },
+            {
+                src: "assets/bw-mobile.png",
                 kind: "mobile",
                 caption: "Di HP",
             },
