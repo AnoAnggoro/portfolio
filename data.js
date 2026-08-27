@@ -8,19 +8,20 @@ const profile = {
     situs: "https://portofolio-7ap.pages.dev",
     cv: "assets/CV_AnoDwiAnggoro.pdf",
     ringkas:
-        "Saya membangun aplikasi yang mengambil pekerjaan hitung-menghitung dari tangan orang — tanpa membuat mereka harus percaya begitu saja pada hasilnya.",
+        "Saya membangun aplikasi yang mengambil alih pekerjaan manual — pencatatan, perhitungan, dan penjadwalan — tanpa membuat siapa pun harus percaya begitu saja pada hasilnya.",
 
     tentang: [
-        "Saya Ano Dwi Anggoro, seorang web developer. Saya membangun aplikasi web dan desktop untuk yayasan, sekolah, posyandu, dan usaha kecil — mulai dari pendataan harian hingga sistem yang menjadi dasar pengambilan keputusan.",
-        "Sampai hari ini tiga belas sistem telah saya bangun dari nol: pendataan anggota, pengelolaan keuangan, penilaian, pemesanan, hingga perhitungan yang menopang sebuah keputusan. Saya menangani seluruh tahapannya — merancang basis data, menyusun antarmuka, menulis logika, sampai menyiapkan laporan yang siap cetak.",
-        "Dua prinsip yang selalu saya pegang: aplikasi harus dapat dipahami sejak pertama kali dibuka, dan setiap angka yang ditampilkan harus dapat ditelusuri perhitungannya. Saat ini saya terbuka untuk proyek baru, baik pengembangan dari awal maupun kelanjutan sistem yang sudah berjalan. Silakan hubungi saya untuk membahas kebutuhan Anda.",
+        "Saya Ano Dwi Anggoro, web developer. Selama ini saya membangun aplikasi web dan desktop untuk yayasan, sekolah, posyandu, dan usaha kecil — tempat yang datanya masih berpindah antara buku tulis, grup WhatsApp, dan spreadsheet, dan butuh sistem yang benar-benar dipakai staf setiap hari, bukan yang hanya rapi saat didemokan.",
+        "Sampai hari ini tiga belas sistem saya bangun dari nol: pendataan anggota, pengelolaan keuangan, penilaian, pemesanan online, sampai perhitungan yang menopang sebuah keputusan. Seluruh tahapnya saya kerjakan sendiri — merancang basis data, menyusun antarmuka, menulis logika, menyiapkan laporan siap cetak, lalu mendampingi sampai sistemnya betul-betul jalan di tempat klien. Teknologinya menyesuaikan kebutuhan: PHP dan MySQL untuk sistem internal yang dipasang di komputer kantor, Next.js untuk yang harus cepat dibuka pelanggan dari HP.",
+        "Dua hal yang tidak saya tawar. Aplikasi harus bisa dipahami sejak pertama kali dibuka, tanpa pelatihan panjang. Dan setiap angka yang tampil harus bisa ditelusuri asal perhitungannya, supaya tetap bisa dipertanggungjawabkan saat ada yang bertanya.",
+        "Saat ini saya terbuka untuk proyek baru, baik pengembangan dari awal maupun melanjutkan dan merapikan sistem yang sudah berjalan. Ceritakan kebutuhan Anda lewat email atau LinkedIn di bawah, nanti saya susun perkiraan lingkup dan waktu pengerjaannya.",
     ],
 
     fakta: [
         ["Aplikasi dibangun", "13"],
         ["Klien", "Yayasan, sekolah, posyandu, UMKM"],
-        ["Cara kerja", "Basis data sampai laporan cetak"],
-        ["Status", "Terbuka untuk kerja sama"],
+        ["Lingkup", "Rancang basis data sampai serah terima"],
+        ["Status", "Terbuka untuk proyek baru"],
     ],
 
     skills: [
@@ -28,13 +29,21 @@ const profile = {
             grup: "Antarmuka yang tidak perlu dijelaskan",
             catatan:
                 "Tata letak yang jelas, tabel yang terbaca sekali lihat, dan halaman yang tetap enak dibuka dari HP.",
-            items: ["HTML", "CSS", "JavaScript", "Tailwind", "React", "Next.js", "Chart.js"],
+            items: [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "Tailwind",
+                "React",
+                "Next.js",
+                "Chart.js",
+            ],
         },
         {
             grup: "Data dan logika di belakangnya",
             catatan:
                 "Merancang tabel, menulis query, dan menjaga satu angka tidak berbeda antara dashboard dan laporan.",
-            items: ["PHP", "MySQL", "MongoDB", "JSON"],
+            items: ["PHP", "MySQL", "MongoDB", "REST API", "JSON"],
         },
         {
             grup: "Analisis data jadi keputusan",
@@ -50,8 +59,9 @@ const profile = {
         },
         {
             grup: "Alat kerja sehari-hari",
-            catatan: "Yang saya buka setiap kali memulai proyek baru.",
-            items: ["Git", "GitHub", "VS Code", "XAMPP", "Figma"],
+            catatan:
+                "Yang saya buka setiap kali memulai proyek baru, sampai sistemnya sampai ke tangan klien.",
+            items: ["Git", "GitHub", "VS Code", "XAMPP", "Vercel", "Figma"],
         },
     ],
 
@@ -60,31 +70,19 @@ const profile = {
             tahun: "Sep 2025 — Jan 2026",
             posisi: "Management Application Developer",
             tempat: "YPOK — Yayasan Pendidikan Olahraga Karate",
-            detail: "Yayasan ini mengurus anggota di beberapa dojo, iuran dan ujian kenaikan tingkat, dokumen legalitas, sampai penjualan perlengkapan resmi. Saya bangun satu aplikasi yang menampung semuanya, lalu mengujinya berulang kali sampai stabil dipakai. Bagian yang paling menentukan justru bukan kodenya, melainkan duduk bareng pengurus untuk tahu fitur mana yang benar-benar mereka pakai.",
+            detail: "Yayasan ini mengurus anggota di beberapa dojo, iuran dan ujian kenaikan tingkat, dokumen legalitas, sampai penjualan perlengkapan resmi. Saya bangun satu aplikasi yang menampung semuanya, lalu mengujinya berulang kali sampai stabil dipakai pengurus. Bagian yang paling menentukan justru bukan kodenya, melainkan duduk bareng mereka untuk tahu fitur mana yang benar-benar dipakai dan mana yang hanya terdengar bagus.",
         },
         {
             tahun: "2024 — sekarang",
             posisi: "Pengembang Aplikasi",
-            tempat: "Proyek mandiri dan perkuliahan",
-            detail: "Dua belas aplikasi, dikerjakan sendirian dari nol: merancang basis datanya, membangun antarmukanya, menulis perhitungannya, sampai laporan yang siap dicetak. Lima memakai metode pendukung keputusan, tiga memakai data mining, satu memakai deteksi objek YOLOv8. Semua yang ada di halaman ini lahir dari sini.",
-        },
-        {
-            tahun: "2024",
-            posisi: "Ketua Penyelenggara Pemilu dan Pilkada",
-            tempat: "Panitia Penyelenggara",
-            detail: "Memimpin jalannya pemilihan dari rapat persiapan sampai pengesahan hasil, dengan syarat yang tidak bisa ditawar: tertib, transparan, dan bisa dipertanggungjawabkan. Kebiasaan itu terbawa ke pekerjaan teknis — setiap angka yang saya tampilkan harus punya jejak kalau ada yang mempertanyakan.",
+            tempat: "Proyek klien dan mandiri",
+            detail: "Tiga belas aplikasi, dikerjakan sendirian dari nol: merancang basis datanya, membangun antarmukanya, menulis perhitungannya, sampai laporan yang siap dicetak. Lima memakai metode pendukung keputusan, tiga memakai data mining, satu memakai deteksi objek YOLOv8, satu lagi sistem pemesanan online multi-cabang. Semua yang ada di halaman ini lahir dari sini.",
         },
         {
             tahun: "Mei — Okt 2021",
             posisi: "Purchasing Staff",
             tempat: "Shuckershaker",
-            detail: "Mengatur pembelian bahan baku, menjaga stok tidak habis di tengah jam sibuk, dan menawar harga ke pemasok. Beberapa tahun kemudian saya membangun modul stok dan transaksi untuk orang lain — kali ini sudah tahu rasanya jadi pihak yang memakainya.",
-        },
-        {
-            tahun: "Feb — Mar 2021",
-            posisi: "Staff Magang",
-            tempat: "PT Miftah Putra Mandiri",
-            detail: "Menangani komputer dan jaringan kantor yang bermasalah. Di sini saya pertama kali sadar bahwa sebagian besar keluhan pengguna bukan karena teknologinya rusak, tapi karena tidak ada yang menjelaskan cara memakainya.",
+            detail: "Mengatur pembelian bahan baku, menjaga stok tidak habis di tengah jam sibuk, dan menawar harga ke pemasok. Beberapa tahun kemudian saya membangun modul stok dan transaksi untuk usaha orang lain — kali ini sudah tahu rasanya jadi pihak yang setiap hari memakainya.",
         },
     ],
 
