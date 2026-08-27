@@ -4,20 +4,20 @@ const profile = {
     nama: "Ano Dwi Anggoro",
     peran: "Web Developer",
     lokasi: "Indonesia",
-    foto: "assets/foto5.webp",
+    foto: "assets/profil.png",
     situs: "https://portofolio-7ap.pages.dev",
-    cv: "assets/cv-anodwianggoro.pdf",
+    cv: "assets/CV_AnoDwiAnggoro.pdf",
     ringkas:
         "Saya membangun aplikasi yang mengambil pekerjaan hitung-menghitung dari tangan orang — tanpa membuat mereka harus percaya begitu saja pada hasilnya.",
 
     tentang: [
         "Saya Ano Dwi Anggoro, seorang web developer. Saya membangun aplikasi web dan desktop untuk yayasan, sekolah, posyandu, dan usaha kecil — mulai dari pendataan harian hingga sistem yang menjadi dasar pengambilan keputusan.",
-        "Sampai hari ini dua belas sistem telah saya bangun dari nol: pendataan anggota, pengelolaan keuangan, penilaian, hingga perhitungan yang menopang sebuah keputusan. Saya menangani seluruh tahapannya — merancang basis data, menyusun antarmuka, menulis logika, sampai menyiapkan laporan yang siap cetak.",
+        "Sampai hari ini tiga belas sistem telah saya bangun dari nol: pendataan anggota, pengelolaan keuangan, penilaian, pemesanan, hingga perhitungan yang menopang sebuah keputusan. Saya menangani seluruh tahapannya — merancang basis data, menyusun antarmuka, menulis logika, sampai menyiapkan laporan yang siap cetak.",
         "Dua prinsip yang selalu saya pegang: aplikasi harus dapat dipahami sejak pertama kali dibuka, dan setiap angka yang ditampilkan harus dapat ditelusuri perhitungannya. Saat ini saya terbuka untuk proyek baru, baik pengembangan dari awal maupun kelanjutan sistem yang sudah berjalan. Silakan hubungi saya untuk membahas kebutuhan Anda.",
     ],
 
     fakta: [
-        ["Aplikasi dibangun", "12"],
+        ["Aplikasi dibangun", "13"],
         ["Klien", "Yayasan, sekolah, posyandu, UMKM"],
         ["Cara kerja", "Basis data sampai laporan cetak"],
         ["Status", "Terbuka untuk kerja sama"],
@@ -28,13 +28,13 @@ const profile = {
             grup: "Antarmuka yang tidak perlu dijelaskan",
             catatan:
                 "Tata letak yang jelas, tabel yang terbaca sekali lihat, dan halaman yang tetap enak dibuka dari HP.",
-            items: ["HTML", "CSS", "JavaScript", "Tailwind", "Chart.js"],
+            items: ["HTML", "CSS", "JavaScript", "Tailwind", "React", "Next.js", "Chart.js"],
         },
         {
             grup: "Data dan logika di belakangnya",
             catatan:
                 "Merancang tabel, menulis query, dan menjaga satu angka tidak berbeda antara dashboard dan laporan.",
-            items: ["PHP", "MySQL", "JSON"],
+            items: ["PHP", "MySQL", "MongoDB", "JSON"],
         },
         {
             grup: "Analisis data jadi keputusan",
