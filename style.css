@@ -830,8 +830,14 @@ h1, h2, h3 {
   .saring::-webkit-scrollbar { display: none; }
   .saring__btn { flex: 0 0 auto; scroll-snap-align: start; }
   .hero__cta .btn { flex: 1 1 8rem; justify-content: center; }
-  .card__thumb { aspect-ratio: 16 / 9; }
-  .card__body { padding: 0.95rem 1rem 1.1rem; }
+  /* di HP kartu jadi mendatar: sampul kecil di kiri, teks di kanan.
+     Sampul memakai contain supaya logo tidak terpotong; latarnya tetap gelap
+     karena sebagian logo berwarna putih dan akan hilang di atas putih. */
+  .card { flex-direction: row; }
+  .card__thumb { aspect-ratio: auto; flex: 0 0 36%; max-width: 8rem; }
+  .card__thumb img { object-fit: contain; padding: 0.55rem; }
+  .card__body { padding: 0.9rem 1rem 1rem; gap: 0.35rem; }
+  .card p { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
   .card__more { padding-top: 0.35rem; }
   .tags li { font-size: 0.74rem; padding: 0.35rem 0.6rem; }
   .pmeta { grid-template-columns: 1fr 1fr; }
