@@ -67,7 +67,7 @@ const profile = {
 
     pengalaman: [
         {
-            tahun: "Sep 2025 — Jan 2026",
+            tahun: "Sep 2025 — Feb 2026",
             posisi: "Management Application Developer",
             tempat: "YPOK — Yayasan Pendidikan Olahraga Karate",
             detail: "Yayasan ini mengurus anggota di beberapa dojo, iuran dan ujian kenaikan tingkat, dokumen legalitas, sampai penjualan perlengkapan resmi. Saya bangun satu aplikasi yang menampung semuanya, lalu mengujinya berulang kali sampai stabil dipakai pengurus. Bagian yang paling menentukan justru bukan kodenya, melainkan duduk bareng mereka untuk tahu fitur mana yang benar-benar dipakai dan mana yang hanya terdengar bagus.",
